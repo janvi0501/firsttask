@@ -1,20 +1,21 @@
 function makegrid(){
     var columns =prompt("Enter no of Column :");
     var rows =prompt("Enter No of Row :"); 
-
+    
     var mygrid = document.createElement('div');
     mygrid.className = 'mygrid';
     for (var i = 1; i <= columns; i++) {
-        var column = document.createElement('div'); // create column
+        var column = document.createElement('div');
         column.className = 'column';
 
         for (var j = 1; j <= rows; j++) {
-            var row = document.createElement('div'); // create row
+            var row = document.createElement('div'); 
             row.className = 'row';
-            row.textContent = j; // set text
-            column.appendChild(row); // append row in column
+            row.textContent = j; 
+            column.appendChild(row); 
         }
-        mygrid.appendChild(column); // append column inside grid
+        
+        mygrid.appendChild(column); 
     }
     document.body.appendChild(mygrid);
     addColor();
